@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "2ad2a616-b5e6-42a0-bbf1-16833bdc06ae",
+		"name": "SupaBaseRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43874889"
+	},
+	"item": [
+		{
+			"name": "SIGNUP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxcGV4ZGNrYXRranh4YWh4a3JkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQwMzkyNTksImV4cCI6MjA1OTYxNTI1OX0.iQsKW_t5pNC7vT33aNFzlvQWKQiwEcPYzhaex6tfxMs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ramezafarouk@yahoo.com\",\r\n  \"password\": \"secure-password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sqpexdckatkjxxahxkrd.supabase.co/auth/v1/signup",
+					"protocol": "https",
+					"host": [
+						"sqpexdckatkjxxahxkrd",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxcGV4ZGNrYXRranh4YWh4a3JkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQwMzkyNTksImV4cCI6MjA1OTYxNTI1OX0.iQsKW_t5pNC7vT33aNFzlvQWKQiwEcPYzhaex6tfxMs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ramezafarouk@hotmail.com\",\r\n  \"password\": \"secure-password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sqpexdckatkjxxahxkrd.supabase.co/auth/v1/token?grant_type=password&",
+					"protocol": "https",
+					"host": [
+						"sqpexdckatkjxxahxkrd",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InQxWnZLejM3c21GbkRJTG4iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NxcGV4ZGNrYXRranh4YWh4a3JkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0Yjg4MzBmNS1lYjAwLTQ0MjEtYTNmYy1jMmUxMGM2NGQwN2EiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ0MjA4MDU5LCJpYXQiOjE3NDQyMDQ0NTksImVtYWlsIjoicmFtZXphZmFyb3VrQGhvdG1haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJhbWV6YWZhcm91a0Bob3RtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjRiODgzMGY1LWViMDAtNDQyMS1hM2ZjLWMyZTEwYzY0ZDA3YSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzQ0MjA0NDU5fV0sInNlc3Npb25faWQiOiIyYTFiYWI4Ni00NTkzLTRhODQtYTk3OC0zNjJmMzg1YzM2MjMiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.k8AHOf_2KAVpd7VOiTQooDMrVcPRG-z8LD-JIqTBYqs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"ramezafarouk@hotmail.com\",\r\n  \"message\": \"Hello Supabase!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sqpexdckatkjxxahxkrd.supabase.co/functions/v1/submit-message",
+					"protocol": "https",
+					"host": [
+						"sqpexdckatkjxxahxkrd",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"functions",
+						"v1",
+						"submit-message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETMESSAGE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InQxWnZLejM3c21GbkRJTG4iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NxcGV4ZGNrYXRranh4YWh4a3JkLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0Yjg4MzBmNS1lYjAwLTQ0MjEtYTNmYy1jMmUxMGM2NGQwN2EiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQ0MjA4MDU5LCJpYXQiOjE3NDQyMDQ0NTksImVtYWlsIjoicmFtZXphZmFyb3VrQGhvdG1haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJhbWV6YWZhcm91a0Bob3RtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6IjRiODgzMGY1LWViMDAtNDQyMS1hM2ZjLWMyZTEwYzY0ZDA3YSJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzQ0MjA0NDU5fV0sInNlc3Npb25faWQiOiIyYTFiYWI4Ni00NTkzLTRhODQtYTk3OC0zNjJmMzg1YzM2MjMiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.k8AHOf_2KAVpd7VOiTQooDMrVcPRG-z8LD-JIqTBYqs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sqpexdckatkjxxahxkrd.supabase.co/functions/v1/get-messages",
+					"protocol": "https",
+					"host": [
+						"sqpexdckatkjxxahxkrd",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"functions",
+						"v1",
+						"get-messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
